@@ -1,14 +1,20 @@
- redis:
-    host: localhost
-    port: 6379
-  zuul:
+ spring:
+   application:
+    name: api-gateway
+   cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+   zuul:
       host:
           connect-timeout-millis: 60000
           socket-timeout-millis: 60000
-  ribbon:
+   ribbon:
         ReadTimeout: 60000
         ConnectTimeout: 60000
-  hystrix:
+   hystrix:
     command:
       default:
         execution:
