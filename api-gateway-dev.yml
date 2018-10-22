@@ -2,6 +2,7 @@
    application:
     name: api-gateway
  zuul:
+  sensitive-headers: 
   routes:
     myProduct:
       path: /myProduct/**
