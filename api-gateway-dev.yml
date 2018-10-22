@@ -1,8 +1,11 @@
  spring:
    application:
     name: api-gateway
-   zuul:
-    routes:
-      myProduct:
-       path: /myProduct/**
-       serviceId: product
+ zuul:
+  routes:
+    myProduct:
+      path: /myProduct/**
+      serviceId: product
+management:
+  security:
+    enabled: false
